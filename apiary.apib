@@ -1,0 +1,89 @@
+FORMAT: 1A
+
+# Automative Industry
+
+# Group Cars Group
+
+## Cars [/cars]
+
++ Model (application/json)
+
+    + Headers
+    
+            X-Auth-Token: token_value
+
+    + Body
+    
+            { "items" : [{
+                "name": "Taurus",
+                "brand": "Ford",
+                "doors": 4
+              }],
+              "count": 1
+            }
+
+### List all cars [GET]
+
++ Response 200
+
+    [Cars][]
+    
++ Response 401
+
++ Response 403
+
++ Response 500
+
++ Response 503
+
+### Create a Car [POST]
+
++ Response 201
+
+    [Car][]
+    
++ Response 401
+
++ Response 403
+
++ Response 500
+
++ Response 503
+
+## Car [/cars/{carId}]
+
++ Parameters
+    + carId (string)... Identifier for a specific Car resource
+
++ Model (application/json)
+
+    + Headers
+    
+            X-Auth-Token: token_value
+
+    + Body
+    
+            {
+              "name": "Taurus",
+              "brand": "Ford",
+              "doors": 4
+            }
+            
+
+### Get a Car [GET]
+
++ Parameters
+  + carId
+
++ Response 200
+
+    [Car][]
+    
++ Response 401
+
++ Response 403
+
++ Response 500
+
++ Response 503
+
